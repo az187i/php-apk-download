@@ -1,9 +1,8 @@
 # php-apk-download
-usage:
+Just fill account data.
+Type *#*#8255#*#* on your android device to get Device_ID
+
 ```php
-$packs = ['com.facebook.katana', 'com.instagram.android'];
-$d = new GStoreApkDownload('account@gmail.com', 'password_to_account', 'android_device_id');
-foreach ($packs as $p) {
-	file_put_contents($p . '.apk', $d->getPackage($p));
-}
+$d = new GStoreApkDownload($email, $password, $device_id);
+file_put_contents('com.facebook.katana.apk', $d->getPackage('com.facebook.katana'));
 ```
